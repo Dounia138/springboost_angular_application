@@ -1,0 +1,42 @@
+version: '3.8'
+services:
+  backend:
+    build: 
+      context: ./springboot
+      dockerfile: ../Dockerfile.springboot
+    ports:
+      - "8080:8080"
+    volumes:
+      - ./springboot:/app
+    networks:
+      - app-network
+  
+  frontend:
+    build:
+      context: ./angular
+      dockerfile: ../Dockerfile.angular
+    ports:
+      - "4200:4200"
+    volumes:
+      - ./angular:/app
+  
+  db:
+    platform: linux/x86_64
+    image: mysql:5.7
+    container_name: db
+    restart: always
+    environment:
+      MYSQL_DATABASE: db
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_USER: user
+      MYSQL_PASSWORD: password
+    ports:
+      - "3306:3306"
+    networks:
+      - app-network
+
+networks:
+  app-network:
+    driver: bridge
+
+
