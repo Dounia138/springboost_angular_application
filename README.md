@@ -1,4 +1,4 @@
-# Demo  + MySQL + Docker
+# Springboot + MySQL + Angular
 
 ## Prerequis 
 
