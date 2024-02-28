@@ -10,7 +10,7 @@
 1. Clone le repo :
 
     ```bash
-    git clone <repository-url>
+    git clone https://github.com/Dounia138/springboost_angular_application.git
     ```
 
 2. Construire et demarrer le projet
