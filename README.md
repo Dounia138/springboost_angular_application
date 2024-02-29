@@ -55,4 +55,4 @@ Si jamais vous rencontrez une erreur liée au dockerfile.angular en lançant le 
 ## Contexte
 
 Nous utilisons l'image MySQL, et on definit le mot de passe et le nom de la base de données dans le fichier `docker-compose.yml`.
-Nous montons le conteneur sur le même réseau que l'application springboost, afin que qu'elle puisse accéder à la base de données en utilisant le nom du conteneur comme hôte (`db`).
+On met le conteneur sur le même réseau que l'application springboost, afin que qu'elle puisse accéder à la base de données en utilisant le nom du conteneur comme hôte (`db`).
